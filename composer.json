@@ -1,0 +1,15 @@
+{
+  "name": "remzikilnc/cache",
+  "description": "Cache what you want",
+  "keywords": ["rediscache", "filecache", "cache", "caching"],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4.0",
+    "ext-redis": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Remzikilnc\\Cache\\": "src/"
+    }
+  }
+}
