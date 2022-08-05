@@ -2,9 +2,6 @@
 
 namespace Remzikilnc\Cache\File;
 
-/*TODO
-    FileHelper yazma / okuma / silme gibi dosya işlemlerinin sağlanacağı yardımcı sınıftır.
-    FileCacheProvider yazılırken dosya işlemlerini sağlayacağınız işlemleri bu sınıfı kullanarak sağlayınız */
 
 class FileHelper
 {

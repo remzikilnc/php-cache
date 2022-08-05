@@ -18,22 +18,17 @@ class FileCacheProvider implements CacheProviderInterface
     {
          return $this->helper->readFile($key);
 
-
-        // TODO: Implement get() method.
     }
 
     public function set(string $key, ?string $value, $seconds = 0)
     {
         $this->helper->writeFile($key, $value, $seconds);
 
-        // TODO: Implement set() method.
     }
 
     public function forget(string $key)
     {
         $this->helper->delFile($key);
 
-        // TODO: Implement forget() method.
     }
 }
-$Test = new FileCacheProvider();
