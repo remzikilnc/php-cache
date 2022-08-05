@@ -33,4 +33,3 @@ class CacheManager
         return $this->provider;
     }
 }
-$CacheManager = new CacheManager();
