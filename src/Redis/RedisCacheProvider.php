@@ -33,12 +33,17 @@ class RedisCacheProvider implements CacheProviderInterface
 
     }
 
-    public function get(string $key, string|\Closure|null $callback = null)
+    public function get(string $key, string|\Closure|null $callback = null, $seconds = 1)
     {
-        if ($callback instanceof \Closure){
-            $callback();
+        if ($this->helper->get($key) == null) {
+            if ($callback instanceof \Closure) {
+                $callback = $callback();
+            }
+            $this->set($key, $callback, $seconds);
+            return $this->get($key);
+        }else{
+            return $this->helper->get($key);
         }
-        return $this->helper->get($key);
     }
 
     public function set(string $key, string|\Closure|null $value, $seconds = 0)
