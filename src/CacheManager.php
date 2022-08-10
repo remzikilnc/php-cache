@@ -20,9 +20,9 @@ class CacheManager
     {
         if ($name == 'file') {
             $this->provider = new FileCacheProvider();
-        } elseif ($name == 'redis') {
+        } /*elseif ($name == 'redis') {
             $this->provider = new RedisCacheProvider();
-        } else {
+        }*/ else {
             throw new \Exception("Böyle bir provider tanımlı değil");
         }
         $this->provider = $this->getProvider();

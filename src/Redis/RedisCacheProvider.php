@@ -1,5 +1,5 @@
 <?php
-
+/*
 namespace Remzikilnc\Cache\Redis;
 
 
@@ -61,4 +61,4 @@ class RedisCacheProvider implements CacheProviderInterface
         $this->helper->unlink($key);
         // TODO: Implement forget() method.
     }
-}
+}*/
